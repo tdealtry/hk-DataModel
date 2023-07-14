@@ -13,13 +13,13 @@ jobs:
   build_ubuntu-latest:
 
     runs-on: ubuntu-latest
-	contianer: docker pull ghcr.io/hyperk/hk-software:main
+    contianer: docker pull ghcr.io/hyperk/hk-software:main
     steps:
     - uses: actions/checkout@v2
-	- name: Framework build
-	  run: cd /usr/local/hk/ToolFrameworkCore/src/ && make
-	- name: build
-	  run: cd /usr/local/hk/hk-DataModel && make
+    - name: Framework build
+      run: cd /usr/local/hk/ToolFrameworkCore/src/ && make
+    - name: build
+      run: cd /usr/local/hk/hk-DataModel && make
 
  
  
