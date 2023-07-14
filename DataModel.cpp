@@ -1,6 +1,8 @@
 #include "DataModel.h"
 
-DataModel::DataModel(){ Log=0;}
+DataModel::DataModel() {
+	Log = 0;
+}
 
 /*
 TTree* DataModel::GetTTree(std::string name){
@@ -24,4 +26,3 @@ void DataModel::DeleteTTree(std::string name,TTree *tree){
 }
 
 */
-
