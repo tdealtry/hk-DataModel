@@ -13,7 +13,7 @@ jobs:
   build_ubuntu-latest:
 
     runs-on: ubuntu-latest
-    contianer: ghcr.io/hyperk/hk-software:main
+    container: ghcr.io/hyperk/clang_format:latest
     steps:
     - uses: actions/checkout@v2
     - name: Framework build
