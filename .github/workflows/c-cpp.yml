@@ -19,7 +19,7 @@ jobs:
     - name: Framework build
       run: cd /usr/local/hk/ToolFrameworkCore/src/ && make
     - name: build
-      run: cd /usr/local/hk/hk-DataModel && make
+      run: cd /usr/bin/git init /__w/hk-DataModel/hk-DataModel && make
 
  
  
