@@ -11,5 +11,5 @@ all: $(objects)
 	$(CXXFLAGS) -c $< -o $@  -I ./ -I $(ToolFrameworkPath)/include -L $(ToolFrameworkPath)/lib -lStore -lLogging -lpthread
 
 clean:
-	rm $(objects)
-	rm libDataModel.so
+	rm -f $(objects)
+	rm -f libDataModel.so
