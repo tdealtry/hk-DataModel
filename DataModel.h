@@ -48,6 +48,8 @@ class DataModel {
 		             ///< collection of any type of BStore. It is usefull to store data collections that needs
 		             ///< subdividing into differnt stores.
 
+  int test;
+
 	private:
 
 		// std::map<std::string,TTree*> m_trees;
