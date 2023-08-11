@@ -12,6 +12,11 @@
 #include "Logging.h"
 #include "Store.h"
 
+#include "G4RunManager.hh"
+
+#include "WCSimTuningParameters.hh"
+#include "WCSimDetectorConstruction.hh"
+
 /**
  * \class DataModel
  *
@@ -47,6 +52,10 @@ class DataModel {
 		    Stores;  ///< This is a map of named BStore pointers which can be deffined to hold a nammed
 		             ///< collection of any type of BStore. It is usefull to store data collections that needs
 		             ///< subdividing into differnt stores.
+
+	std::unique_ptr<G4RunManager> m_p_g4_run_manager;
+	std::unique_ptr<WCSimTuningParameters> m_p_g4_tuning_pars;
+	std::unique_ptr<WCSimDetectorConstruction> m_p_wcsim_detector_construction;
 
 	private:
 
