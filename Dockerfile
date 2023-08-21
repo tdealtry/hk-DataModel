@@ -1,4 +1,4 @@
-FROM ghcr.io/hyperk/hk-meta-externals:main
+FROM ghcr.io/hyperk/hk-meta-externals:latest
 
 COPY . /usr/local/hk/hk-DataModel
 
