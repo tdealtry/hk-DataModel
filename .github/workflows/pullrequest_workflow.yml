@@ -39,13 +39,17 @@ jobs:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
 
       - name: Build and push Docker image
-        uses: docker/build-push-action@v4.1.1
+        uses: docker/build-push-action@v3.1.0
         with:
           context: .
           file: Dockerfile
           push: false
           pull: true
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
           ssh: |
             default=${{ env.SSH_AUTH_SOCK }}
+
+#      - name: Build the Docker image
+#        run: docker build . --file Dockerfile --tag ghcr.io/hyperk/geant4:latest
