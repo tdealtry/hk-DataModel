@@ -2,7 +2,7 @@ ToolFrameworkPath:= /usr/local/hk/ToolFrameworkCore/src
 
 CXXFLAGS:= g++ -O3 -fPIC
 
-objects:=$(patsubst %.cpp, %.o, $(wildcard *.cpp))
+objects:=$(patsubst %.cpp, %.o, $(wildcard DataModel/*.cpp))
 
 all: $(objects)
 	$(CXXFLAGS) --shared  $(objects) -o libDataModel.so
