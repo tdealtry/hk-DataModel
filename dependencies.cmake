@@ -1,1 +1,1 @@
-hk_package(ToolFrameworkCore *)
+hk_package(ToolFrameworkCore*)
