@@ -77,6 +77,8 @@ class DataModel {
 	std::unique_ptr<WCSimSteppingAction> m_p_wcsim_stepping_action;
 	std::string m_wcsim_mac_job_opt_filename;
 
+	unsigned long m_current_event; ///< Current event number
+
 	private:
 
 		// std::map<std::string,TTree*> m_trees;
