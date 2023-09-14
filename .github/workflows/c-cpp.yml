@@ -20,7 +20,7 @@ jobs:
       run: |
         cd /usr/local/hk/ToolFrameworkCore/src/
         sed -i 's!gray!grey!' src/Logging/Logging.h
-        make -j4
+        make
     - name: build
       run: |
         sed -i -e 's!geant4!./geant4!' /usr/local/hk/hk-software/install-Linux_x86_64-gcc_8-python_3.8.13/setup.sh
