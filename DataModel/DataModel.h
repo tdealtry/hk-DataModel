@@ -62,7 +62,7 @@ class DataModel {
 		             ///< subdividing into differnt stores.
 
 	//Geant4 essentials
-	std::unique_ptr<G4RunManager> m_p_g4_run_manager;
+  //std::unique_ptr<G4RunManager> m_p_g4_run_manager;
 	G4UImanager* m_p_UI;
 
 	//WCSim legacy
