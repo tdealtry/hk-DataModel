@@ -15,15 +15,15 @@
 #include "G4RunManager.hh"
 #include "G4UImanager.hh"
 
-#include "WCSimTuningParameters.hh"
 #include "WCSimDetectorConstruction.hh"
-#include "WCSimPrimaryGeneratorAction.hh"
-#include "WCSimPhysicsListFactory.hh"
-#include "WCSimRunAction.hh"
-#include "WCSimRandomParameters.hh"
 #include "WCSimEventAction.hh"
+#include "WCSimPhysicsListFactory.hh"
+#include "WCSimPrimaryGeneratorAction.hh"
+#include "WCSimRandomParameters.hh"
+#include "WCSimRunAction.hh"
 #include "WCSimStackingAction.hh"
 #include "WCSimSteppingAction.hh"
+#include "WCSimTuningParameters.hh"
 
 /**
  * \class DataModel
@@ -61,23 +61,23 @@ class DataModel {
 		             ///< collection of any type of BStore. It is usefull to store data collections that needs
 		             ///< subdividing into differnt stores.
 
-	//Geant4 essentials
-  //std::unique_ptr<G4RunManager> m_p_g4_run_manager;
-	G4UImanager* m_p_UI;
+		// Geant4 essentials
+		// std::unique_ptr<G4RunManager> m_p_g4_run_manager;
+		G4UImanager* m_p_UI;
 
-	//WCSim legacy
-	std::unique_ptr<WCSimTuningParameters> m_p_g4_tuning_pars;
-	std::unique_ptr<WCSimDetectorConstruction> m_p_wcsim_detector_construction;
-	std::unique_ptr<WCSimPrimaryGeneratorAction> m_p_wcsim_primary_generator_action;
-	std::unique_ptr<WCSimPhysicsListFactory> m_p_wcsim_physics_list_factory;
-	std::unique_ptr<WCSimRunAction> m_p_wcsim_run_action;
-	std::unique_ptr<WCSimRandomParameters> m_p_wcsim_random_parameters;
-	std::unique_ptr<WCSimEventAction> m_p_wcsim_event_action;
-	std::unique_ptr<WCSimStackingAction> m_p_wcsim_stacking_action;
-	std::unique_ptr<WCSimSteppingAction> m_p_wcsim_stepping_action;
-	std::string m_wcsim_mac_job_opt_filename;
+		// WCSim legacy
+		std::unique_ptr<WCSimTuningParameters> m_p_g4_tuning_pars;
+		std::unique_ptr<WCSimDetectorConstruction> m_p_wcsim_detector_construction;
+		std::unique_ptr<WCSimPrimaryGeneratorAction> m_p_wcsim_primary_generator_action;
+		std::unique_ptr<WCSimPhysicsListFactory> m_p_wcsim_physics_list_factory;
+		std::unique_ptr<WCSimRunAction> m_p_wcsim_run_action;
+		std::unique_ptr<WCSimRandomParameters> m_p_wcsim_random_parameters;
+		std::unique_ptr<WCSimEventAction> m_p_wcsim_event_action;
+		std::unique_ptr<WCSimStackingAction> m_p_wcsim_stacking_action;
+		std::unique_ptr<WCSimSteppingAction> m_p_wcsim_stepping_action;
+		std::string m_wcsim_mac_job_opt_filename;
 
-	unsigned long m_current_event; ///< Current event number
+		unsigned long m_current_event;  ///< Current event number
 
 	private:
 
