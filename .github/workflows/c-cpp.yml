@@ -17,9 +17,18 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Framework build
-      run: cd /usr/local/hk/ToolFrameworkCore/src/ && make
+      run: |
+        cd /usr/local/hk/ToolFrameworkCore/src/
+        sed -i 's!gray!grey!' src/Logging/Logging.h
+        make -j4
     - name: build
-      run: cd /__w/hk-DataModel/hk-DataModel && make
+      run: |
+        sed -i -e 's!geant4!./geant4!' /usr/local/hk/hk-software/install-Linux_x86_64-gcc_8-python_3.8.13/setup.sh
+        source /usr/local/hk/hk-software/install-Linux_x86_64-gcc_8-python_3.8.13/setup.sh
+        mkdir -p /usr/local/hk/hk-ToolApp/UserTools/ImportedTools/GHOST-WCSim/
+        ln -s /usr/local/hk/WCSim/install-Linux_x86_64-gcc_8-python_3.8.13/ /usr/local/hk/hk-ToolApp/UserTools/ImportedTools/GHOST-WCSim/OriginalWCSim_build
+        source /usr/local/hk/hk-pilot/../WCSim/install-Linux_x86_64-gcc_8-python_3.8.13/bin/this_wcsim.sh
+        make
 
  
  
