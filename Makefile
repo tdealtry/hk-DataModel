@@ -16,7 +16,10 @@ EXTERNALS := $(ROOT_INCLUDES) \
 	$(WCSIM_LIBS) \
 	$(WCSIM_INCLUDES)
 
-CXXFLAGS:= g++ -O3 -fPIC
+CXXFLAGS:= g++ -O3 -fPIC -Wpedantic -Wall #-std=c++17
+ifeq ($(MAKECMDGOALS),debug)
+CXXFLAGS+= -O0 -g -lSegFault -rdynamic -DDEBUG #-fsanitize=address
+endif
 
 objects:=$(patsubst %.cpp, %.o, $(wildcard DataModel/*.cpp))
 
