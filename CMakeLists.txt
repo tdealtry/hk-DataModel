@@ -15,5 +15,8 @@ hkbuilder_prepare_project()
 set( PUBLIC_EXT_LIBS )
 hk_check_dependencies()
 
-
 add_subdirectory(DataModel)
+
+set(hk-DataModel_LIBRARIES hk-DataModel::DataModel)
+
+hk_finalize_project()
