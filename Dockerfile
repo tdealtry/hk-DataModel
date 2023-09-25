@@ -1,4 +1,4 @@
-FROM ghcr.io/hyperk/toolframeworkcore:latest
+FROM ghcr.io/hyperk/toolframeworkcore:main
 
 COPY . /usr/local/hk/hk-DataModel
 
