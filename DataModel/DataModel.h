@@ -12,6 +12,8 @@
 #include "Logging.h"
 #include "Store.h"
 
+#include "G4RunManager.hh"
+
 /**
  * \class DataModel
  *
@@ -48,9 +50,9 @@ class DataModel {
 		             ///< collection of any type of BStore. It is usefull to store data collections that needs
 		             ///< subdividing into differnt stores.
 
-	private:
-
 		// std::map<std::string,TTree*> m_trees;
-};
 
+	  G4RunManager* m_p_run_manager;
+  private:
+};
 #endif
