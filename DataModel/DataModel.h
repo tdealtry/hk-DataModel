@@ -52,7 +52,8 @@ class DataModel {
 
 		// std::map<std::string,TTree*> m_trees;
 
-	  G4RunManager* m_p_run_manager;
-  private:
+		G4RunManager* m_p_run_manager;
+
+	private:
 };
 #endif
