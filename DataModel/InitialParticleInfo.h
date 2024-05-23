@@ -50,13 +50,11 @@ namespace Ghost {
 
 			~InitialParticleInfo() {}
 
-		void Print() const {
-			std::cout << "Initial particle "
-								<< " PDG: " << m_particle_pdg
-								<< " kinetic energy: " << m_kinetic_energy
-								<< " time: " << m_time
-								<< std::endl;
-		}
+			void Print() const {
+				std::cout << "Initial particle "
+				          << " PDG: " << m_particle_pdg << " kinetic energy: " << m_kinetic_energy
+				          << " time: " << m_time << std::endl;
+			}
 	};
 }  // namespace Ghost
 
