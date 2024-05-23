@@ -12,7 +12,8 @@ set (SRC
         Utilities.cpp)
 set (HEADERS 
         DataModel.h
-        Utilities.h)
+        Utilities.h
+				InitialParticleInfo.h)
 
 pbuilder_library(
         TARGET DataModel

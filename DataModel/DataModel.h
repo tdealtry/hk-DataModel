@@ -13,6 +13,7 @@
 #include "Store.h"
 
 #include "G4RunManager.hh"
+#include "InitialParticleInfo.h"
 
 /**
  * \class DataModel
@@ -54,6 +55,8 @@ class DataModel {
 
 		G4RunManager* m_p_run_manager;
 
+	const std::vector<Ghost::InitialParticleInfo> * m_p_particles_to_simulate;
+	const std::vector<Ghost::InitialParticleInfo> * m_p_particles_to_save;
 	private:
 };
 #endif
